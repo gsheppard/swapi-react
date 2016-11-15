@@ -3,5 +3,5 @@
 node_modules/
 .vscode/
 npm-debug.log
-build/*.js
-build/*.css
+public/*.js
+public/*.css
