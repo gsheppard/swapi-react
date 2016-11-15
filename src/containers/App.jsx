@@ -4,6 +4,7 @@ import { fetchPeopleIfNeeded } from '../actions/people';
 import Search from '../components/Search';
 import Results from '../components/Results';
 import Loader from '../components/Loader';
+import Logo from '../components/Logo';
 
 class AsyncApp extends Component {
   constructor(props) {
@@ -24,7 +25,8 @@ class AsyncApp extends Component {
     const { searchStr, people, isFetching } = this.props;
     return (
       <div>
-        <h1>Star Wars Character Search</h1>
+        <Logo />
+        <h1 className="title">Character Search</h1>
         <Search value={searchStr} onChange={this.handleChange} />
         {isFetching && people.length === 0 &&
           <Loader />
