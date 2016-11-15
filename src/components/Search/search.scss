@@ -3,7 +3,8 @@ $border-color: #ccc;
 .search__input {
   margin: 20px auto 40px;
   border: 1px solid $border-color;
-  padding: 10px;
+  border-radius: 5px;
+  padding: 20px;
   width: 100%;
   font-size: 16px;
 
