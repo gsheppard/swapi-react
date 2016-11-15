@@ -1,0 +1,25 @@
+{
+  "extends": "airbnb",
+  "plugins": [
+    "babel"
+  ],
+  "rules": {
+    "no-console": 0,
+    "comma-dangle": 0,
+    "max-len": 0,
+    "class-methods-use-this": 0,
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "react/require-extension": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.config.js", "**/*.test.js", "**/*.spec.js"]}],
+    "import/no-named-as-default-member": 0
+  },
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "mocha": true
+  }
+}
