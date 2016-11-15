@@ -7,14 +7,14 @@ export const UPDATE_SRC = 'UPDATE_SRC';
 function updateSrcString(searchStr) {
   return {
     type: UPDATE_SRC,
-    searchStr
+    searchStr,
   };
 }
 
 function requestPeople(searchStr) {
   return {
     type: REQUEST_PEOPLE,
-    searchStr
+    searchStr,
   };
 }
 
@@ -23,7 +23,7 @@ function receivePeople(searchStr, json) {
     type: RECEIVE_PEOPLE,
     searchStr,
     people: json.results,
-    receivedAt: Date.now()
+    receivedAt: Date.now(),
   };
 }
 

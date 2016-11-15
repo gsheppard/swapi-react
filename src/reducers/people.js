@@ -13,13 +13,13 @@ function searchStr(state = '', action) {
 function persons(state = {
   isFetching: false,
   searchStr: '',
-  people: []
+  people: [],
 }, action) {
   switch (action.type) {
     case REQUEST_PEOPLE:
       return Object.assign({}, state, {
         searchStr: action.searchStr,
-        isFetching: true
+        isFetching: true,
       });
     case RECEIVE_PEOPLE:
       return Object.assign({}, state, {
@@ -36,7 +36,7 @@ function personsBySearchString(state = {}, action) {
     case RECEIVE_PEOPLE:
     case REQUEST_PEOPLE:
       return Object.assign({}, state, {
-        [action.searchStr]: persons(state[action.searchStr], action)
+        [action.searchStr]: persons(state[action.searchStr], action),
       });
     default:
       return state;
@@ -45,5 +45,5 @@ function personsBySearchString(state = {}, action) {
 
 export default combineReducers({
   personsBySearchString,
-  searchStr
+  searchStr,
 });
