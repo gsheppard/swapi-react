@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base build/ --config webpack/webpack.dev.js",
+    "start": "webpack-dev-server --content-base public/ --config webpack/webpack.dev.js",
     "build": "webpack --color --display-error-details --config webpack/webpack.prod.js",
     "lint": "eslint .; exit 0"
   },
