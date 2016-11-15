@@ -3,4 +3,5 @@
 node_modules/
 .vscode/
 npm-debug.log
-build/bundle.js
+build/*.js
+build/*.css

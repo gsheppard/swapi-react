@@ -15,14 +15,21 @@
   "author": "Rob BG <rob.bg@me.com>",
   "license": "MIT",
   "dependencies": {
+    "autoprefixer": "^6.5.3",
+    "css-loader": "^0.25.0",
+    "cssnano": "^3.8.0",
     "isomorphic-fetch": "^2.2.1",
+    "node-sass": "^3.12.5",
+    "postcss-loader": "^1.1.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-hot-loader": "^3.0.0-beta.6",
     "react-redux": "^4.4.6",
     "redux": "^3.6.0",
     "redux-logger": "^2.7.4",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",

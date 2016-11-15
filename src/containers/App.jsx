@@ -2,7 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { fetchPeopleIfNeeded } from '../actions/people';
 import Search from '../components/Search';
-import PeopleList from '../components/PeopleList';
+import Results from '../components/Results';
+import Loader from '../components/Loader';
 
 class AsyncApp extends Component {
   constructor(props) {
@@ -20,25 +21,20 @@ class AsyncApp extends Component {
   }
 
   render() {
-    const { searchStr, people, isFetching, lastUpdated } = this.props;
+    const { searchStr, people, isFetching } = this.props;
     return (
       <div>
         <h1>Star Wars Character Search</h1>
         <Search value={searchStr} onChange={this.handleChange} />
-        <p>
-          {lastUpdated &&
-            <span>Last updated at {new Date(lastUpdated).toLocaleTimeString()}.{' '}</span>
-          }
-        </p>
         {isFetching && people.length === 0 &&
-          <h2>Loading...</h2>
+          <Loader />
         }
         {!isFetching && people.length === 0 &&
-          <h2>Nothing to show yet</h2>
+          <h2>No Results</h2>
         }
         {people.length > 0 &&
           <div style={{ opacity: isFetching ? 0.5 : 1 }}>
-            <PeopleList people={people} />
+            <Results people={people} />
           </div>
         }
       </div>
@@ -50,13 +46,12 @@ AsyncApp.propTypes = {
   searchStr: PropTypes.string,
   people: PropTypes.arrayOf(PropTypes.object),
   isFetching: PropTypes.bool,
-  lastUpdated: PropTypes.number,
   dispatch: PropTypes.func
 };
 
 function mapStateToProps(state) {
   const { searchStr, personsBySearchString } = state;
-  const { isFetching, lastUpdated, people } = personsBySearchString[searchStr] || {
+  const { isFetching, people } = personsBySearchString[searchStr] || {
     searchStr,
     isFetching: true,
     people: []
@@ -65,8 +60,7 @@ function mapStateToProps(state) {
   return {
     searchStr,
     people,
-    isFetching,
-    lastUpdated
+    isFetching
   };
 }
 

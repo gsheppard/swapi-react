@@ -27,7 +27,7 @@ function receivePeople(searchStr, json) {
   };
 }
 
-function fetchPosts(searchStr) {
+function fetchPeople(searchStr) {
   return (dispatch) => {
     dispatch(updateSrcString(searchStr));
     dispatch(requestPeople(searchStr));
@@ -37,7 +37,7 @@ function fetchPosts(searchStr) {
   };
 }
 
-function shouldFetchPosts(state, searchStr) {
+function shouldFetchPeople(state, searchStr) {
   const posts = state.personsBySearchString[searchStr];
   if (!posts) {
     return true;
@@ -49,8 +49,8 @@ function shouldFetchPosts(state, searchStr) {
 
 export function fetchPeopleIfNeeded(searchStr) {
   return (dispatch, getState) => {
-    if (shouldFetchPosts(getState(), searchStr)) {
-      return dispatch(fetchPosts(searchStr));
+    if (shouldFetchPeople(getState(), searchStr)) {
+      return dispatch(fetchPeople(searchStr));
     }
     return dispatch(updateSrcString(searchStr));
   };
