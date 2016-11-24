@@ -13,7 +13,7 @@ const Results = props => (
 );
 
 Results.propTypes = {
-  people: PropTypes.arrayOf(PropTypes.object).isRequired
+  people: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Results;

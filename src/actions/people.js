@@ -22,7 +22,15 @@ function receivePeople(searchStr, json) {
   return {
     type: RECEIVE_PEOPLE,
     searchStr,
-    people: json.results,
+    people: json.results.map(person => ({
+      name: person.name,
+      gender: person.gender,
+      skin_color: person.skin_color,
+      hair_color: person.hair_color,
+      eye_color: person.eye_color,
+      height: person.height,
+      mass: person.mass,
+    })),
     receivedAt: Date.now(),
   };
 }

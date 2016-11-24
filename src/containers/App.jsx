@@ -48,7 +48,7 @@ AsyncApp.propTypes = {
   searchStr: PropTypes.string,
   people: PropTypes.arrayOf(PropTypes.object),
   isFetching: PropTypes.bool,
-  dispatch: PropTypes.func
+  dispatch: PropTypes.func,
 };
 
 function mapStateToProps(state) {
@@ -56,13 +56,13 @@ function mapStateToProps(state) {
   const { isFetching, people } = personsBySearchString[searchStr] || {
     searchStr,
     isFetching: true,
-    people: []
+    people: [],
   };
 
   return {
     searchStr,
     people,
-    isFetching
+    isFetching,
   };
 }
 

@@ -15,7 +15,15 @@ const Person = props => (
 );
 
 Person.propTypes = {
-  entry: PropTypes.object.isRequired
+  entry: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    gender: PropTypes.string,
+    skin_color: PropTypes.string,
+    hair_color: PropTypes.string,
+    eye_color: PropTypes.string,
+    height: PropTypes.string,
+    mass: PropTypes.string,
+  }),
 };
 
 export default Person;
