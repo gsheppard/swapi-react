@@ -41,6 +41,10 @@ class AsyncApp extends Component {
           {items.length > 0 &&
             <Results items={items} />
           }
+          <div className="tagline">
+            Built and designed by Rob BG using React / Redux.&nbsp;
+            <a href="https://github.com/robertbg/react-example">Source code on Github</a>.
+          </div>
         </section>
       </div>
     );

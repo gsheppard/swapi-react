@@ -5,7 +5,7 @@ const Film = props => (
   <li className="results__item">
     <h3 className="results__title">
       {props.item.name}
-      <span>(Episode {props.item.episode_id})</span>
+      <span> (Episode {props.item.episode_id})</span>
     </h3>
     <div
       className="results__bg"

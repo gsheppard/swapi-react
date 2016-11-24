@@ -17,6 +17,15 @@ body {
   font-size: $body-font-size;
 }
 
+a {
+  text-decoration: none;
+  color: $highlight-color;
+
+  &:hover {
+    color: darken($highlight-color, 10%);
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -48,4 +57,9 @@ body {
     margin-left: 40%;
     width: 60%;
   }
+}
+
+.tagline {
+  margin: 10px 0;
+  padding: 0 10px;
 }
