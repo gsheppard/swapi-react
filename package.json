@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --content-base public/ --config webpack/webpack.dev.js",
     "build": "webpack --color --display-error-details --config webpack/webpack.prod.js",
-    "lint": "eslint .; exit 0"
+    "lint": "eslint --ext .js --ext .jsx .; exit 0"
   },
   "repository": {
     "url": "git@github.com:robertbg/react-example.git",

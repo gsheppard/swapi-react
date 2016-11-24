@@ -20,7 +20,7 @@ const Search = (props) => {
 
 Search.propTypes = {
   value: PropTypes.string,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
 };
 
 export default Search;
