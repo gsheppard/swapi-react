@@ -1,22 +1,28 @@
+@import '../../scss/breakpoints';
+
 $base: #ebf2fa;
-$base-tint: #a7d0e0;
-$lens: #295a6d;
-$lens-highlight: #2a6b80;
-$stroke: #244356;
+$stroke: #000;
+$base-tint: lighten($stroke, 80%);
+$lens: lighten($stroke, 10%);
+$lens-highlight: lighten($stroke, 20%);
 $orange: #fdc23e;
 $shadow: rgba(0, 0, 0, .4);
 $shadow-light: rgba(0, 0, 0, .2);
 
 .loader {
+  display: flex;
   position: relative;
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+
+  @media screen and (min-width: $laptop) {
+    align-items: center;
+  }
 }
 
 .bb8 {
-  position: absolute;
-  left: 50%;
   transform: scale(.5);
-  margin-left: -110px;
   width: 220px;
   height: 220px;
 }

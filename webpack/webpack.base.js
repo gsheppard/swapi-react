@@ -21,6 +21,10 @@ module.exports = {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style-loader', ['css-loader?url=false', 'postcss-loader', 'sass-loader']),
       },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline',
+      },
     ],
   },
   plugins: [

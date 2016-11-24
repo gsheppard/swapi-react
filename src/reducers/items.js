@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { REQUEST_PEOPLE, RECEIVE_PEOPLE, UPDATE_SRC } from '../actions/people';
+import { REQUEST_ITEMS, RECEIVE_ITEMS, UPDATE_SRC } from '../actions/items';
 
 function searchStr(state = '', action) {
   switch (action.type) {
@@ -10,33 +10,33 @@ function searchStr(state = '', action) {
   }
 }
 
-function persons(state = {
+function items(state = {
   isFetching: false,
   searchStr: '',
-  people: [],
+  items: [],
 }, action) {
   switch (action.type) {
-    case REQUEST_PEOPLE:
+    case REQUEST_ITEMS:
       return Object.assign({}, state, {
         searchStr: action.searchStr,
         isFetching: true,
       });
-    case RECEIVE_PEOPLE:
+    case RECEIVE_ITEMS:
       return Object.assign({}, state, {
         isFetching: false,
-        people: action.people,
+        items: action.items,
       });
     default:
       return state;
   }
 }
 
-function personsBySearchString(state = {}, action) {
+function itemsBySearchString(state = {}, action) {
   switch (action.type) {
-    case RECEIVE_PEOPLE:
-    case REQUEST_PEOPLE:
+    case RECEIVE_ITEMS:
+    case REQUEST_ITEMS:
       return Object.assign({}, state, {
-        [action.searchStr]: persons(state[action.searchStr], action),
+        [action.searchStr]: items(state[action.searchStr], action),
       });
     default:
       return state;
@@ -44,6 +44,6 @@ function personsBySearchString(state = {}, action) {
 }
 
 export default combineReducers({
-  personsBySearchString,
+  itemsBySearchString,
   searchStr,
 });
