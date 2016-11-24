@@ -1,11 +1,12 @@
 @import '../../scss/breakpoints';
+@import '../../scss/colors';
 
 $base: #ebf2fa;
 $stroke: #000;
 $base-tint: lighten($stroke, 80%);
 $lens: lighten($stroke, 10%);
 $lens-highlight: lighten($stroke, 20%);
-$orange: #fdc23e;
+$orange: $highlight-color;
 $shadow: rgba(0, 0, 0, .4);
 $shadow-light: rgba(0, 0, 0, .2);
 
