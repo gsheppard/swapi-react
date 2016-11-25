@@ -61,5 +61,16 @@ a {
 
 .tagline {
   margin: 10px 0;
-  padding: 0 10px;
+  padding: 0 30px 20px;
+}
+
+.tagline__logo {
+  float: right;
+  width: 50px;
+  height: auto;
+  fill: $base-color;
+
+  .logo__dot {
+    fill: $highlight-color;
+  }
 }
