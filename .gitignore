@@ -2,10 +2,4 @@
 .idea/
 node_modules/
 .vscode/
-<<<<<<< HEAD
 npm-debug.log
-public/*.js
-public/*.css
-=======
-npm-debug.log
->>>>>>> develop
