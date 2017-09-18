@@ -2,6 +2,8 @@
 Simple React interface for searching the [Star Wars API](https://swapi.co/).
 Serves no real purpose, but is useful as an example or boilerplate for a React / Redux SPA using an API as a content source.
 
+![SWAPI Screenshot](https://raw.githubusercontent.com/robertbg/swapi-react/master/screenshot.png)
+
 ## Demo
 [Click here](http://robbg.io/swapi-react/) for a demo.
 
