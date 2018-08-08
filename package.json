@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch",
+    "start": "node server.js",
     "build": "webpack --color --display-error-details --config webpack/webpack.prod.js",
     "lint": "eslint --ext .js --ext .jsx .; exit 0"
   },
