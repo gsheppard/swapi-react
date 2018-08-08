@@ -13,8 +13,7 @@ Serves no real purpose, but is useful as an example or boilerplate for a React /
 * `yarn install` - to install project dependencies.
 
 ## Get Started
-* `npm start` - to start webpack and watch for changes.
-* `open index.html` - No fancy servers right now
+* `yarn start` - to start server, webpack, and watch for changes.
 
 ## Other Commands
 * `npm run build` - build production assets

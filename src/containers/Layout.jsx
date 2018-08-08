@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchItemsIfNeeded } from '../actions/items';
-import Search from '../components/Search';
 import Results from '../components/Results';
 import Loader from '../components/Loader';
 import Logo from '../components/Logo';
@@ -16,12 +15,11 @@ class AsyncApp extends Component {
   }
 
   render() {
-    const { searchStr, items, isFetching } = this.props;
+    const { items, isFetching } = this.props;
     return (
       <div className='container'>
         <header className='header'>
           <Logo />
-          <Search />
         </header>
         <section className='content'>
           {isFetching && items.length === 0 &&
