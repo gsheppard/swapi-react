@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchItemsIfNeeded } from '../actions/items';
 import Search from '../components/Search';
@@ -84,7 +85,7 @@ class AsyncApp extends Component {
         </section>
       </div>
     );
-}
+  }
 }
 
 AsyncApp.propTypes = {
